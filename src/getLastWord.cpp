@@ -9,8 +9,24 @@ Note:Dont modify original string Neglect Spaces at the right end and at left end
 ->Create a new string and return it , Use dynamic memory allocation .
 */
 #include <stdlib.h>
+#include <stdlib.h>
 
 char * get_last_word(char * str){
-
-	return NULL;
+	if (str = "")
+		return "";
+	int i = 0,j=0;
+	char *s;
+	s = (char *)malloc(sizeof(char) * 100);
+	while (str[i] != '\0')
+		i++;
+	while (str[i] == ' ')
+		i--;
+	while (str[i] != ' '||i==0)
+		i--;
+	i++;
+	if (i == 1)
+		return "";
+	while (str[i] != '\0')
+		s[j++] = str[i++];
+	return s;
 }
